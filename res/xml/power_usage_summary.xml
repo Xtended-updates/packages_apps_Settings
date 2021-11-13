@@ -34,63 +34,8 @@
         settings:controller="com.android.settings.fuelgauge.batterytip.BatteryTipPreferenceController" />
 
     <PreferenceCategory
-        android:key="battery_saver_category"
-        android:title="@string/battery_saver_category_title">
-
-        <Preference
-            android:fragment="com.android.settings.fuelgauge.batterysaver.BatterySaverSettings"
-            android:key="battery_saver_summary"
-            android:title="@string/battery_saver"
-            settings:controller="com.android.settings.fuelgauge.BatterySaverController" />
-
-        <Preference
-            android:fragment="com.android.settings.fuelgauge.SmartBatterySettings"
-            android:key="smart_battery_manager"
-            android:title="@string/smart_battery_manager_title_custom"
-            settings:controller="com.android.settings.fuelgauge.batterytip.BatteryManagerPreferenceController" />
-
-        <SwitchPreference
-            android:key="battery_percentage"
-            android:title="@string/battery_percentage"
-            android:summary="@string/battery_percentage_description"
-            settings:controller="com.android.settings.display.BatteryPercentagePreferenceController" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="smart_features_category"
-        android:title="@string/smart_features_category_title">
-        
-        <com.xtended.support.preferences.SystemSettingSwitchPreference
-           android:key="xtended_idle_manager"
-           android:title="@string/xtended_idle_manager_title"
-           android:summary="@string/xtended_idle_manager_summary"
-           android:defaultValue="true" />
-
-        <Preference
-            android:fragment="com.android.settings.fuelgauge.smartcharging.SmartChargingSettings"
-            android:key="smart_charging"
-            android:defaultValue="false"
-            android:title="@string/smart_charging_title"
-            android:summary="@string/smart_charging_summary" />
-
-        <Preference
-            android:fragment="com.android.settings.fuelgauge.smartcutoff.SmartCutoffSettings"
-            android:key="smart_cutoff_key"
-            android:title="@string/smart_cutoff_title"
-            android:summary="@string/smart_cutoff_summary" />
-
-    </PreferenceCategory>
-
-    <PreferenceScreen
-        android:key="battery_charge_sound"
-        android:title="@string/notification_battery_charge_level_title"
-        android:summary="@string/notification_battery_charge_level_summary"
-        android:fragment="com.android.settings.fuelgauge.BatteryChargeSoundSettings" />
-
-    <PreferenceCategory
         android:key="battery_usage_category"
-        android:title="@string/battery_usage_category_title"> 
+        android:title="@string/battery_usage_category_title">
 
         <com.android.settings.fuelgauge.PowerGaugePreference
             android:key="last_full_charge"
@@ -129,7 +74,62 @@
             android:selectable="false" />
 
     </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="smart_features_category"
+        android:title="@string/smart_features_category_title">
 
+        <Preference
+            android:fragment="com.android.settings.fuelgauge.smartcharging.SmartChargingSettings"
+            android:key="smart_charging"
+            android:defaultValue="false"
+            android:title="@string/smart_charging_title"
+            android:summary="@string/smart_charging_summary" />
+
+        <Preference
+            android:fragment="com.android.settings.fuelgauge.smartcutoff.SmartCutoffSettings"
+            android:key="smart_cutoff_key"
+            android:title="@string/smart_cutoff_title"
+            android:summary="@string/smart_cutoff_summary" />
+
+    </PreferenceCategory>
+
+    <PreferenceScreen
+        android:key="battery_charge_sound"
+        android:title="@string/notification_battery_charge_level_title"
+        android:summary="@string/notification_battery_charge_level_summary"
+        android:fragment="com.android.settings.fuelgauge.BatteryChargeSoundSettings" />
+        
+    <com.xtended.support.preferences.SystemSettingSwitchPreference
+        android:key="xtended_idle_manager"
+        android:title="@string/xtended_idle_manager_title"
+        android:summary="@string/xtended_idle_manager_summary"
+        android:defaultValue="true" />
+
+    <PreferenceCategory
+        android:key="battery_saver_category"
+        android:title="@string/battery_saver_category_title">
+
+        <Preference
+            android:fragment="com.android.settings.fuelgauge.batterysaver.BatterySaverSettings"
+            android:key="battery_saver_summary"
+            android:title="@string/battery_saver"
+            settings:controller="com.android.settings.fuelgauge.BatterySaverController" />
+
+        <Preference
+            android:fragment="com.android.settings.fuelgauge.SmartBatterySettings"
+            android:key="smart_battery_manager"
+            android:title="@string/smart_battery_manager_title_custom"
+            settings:controller="com.android.settings.fuelgauge.batterytip.BatteryManagerPreferenceController" />
+
+        <SwitchPreference
+            android:key="battery_percentage"
+            android:title="@string/battery_percentage"
+            android:summary="@string/battery_percentage_description"
+            settings:controller="com.android.settings.display.BatteryPercentagePreferenceController" />
+
+    </PreferenceCategory>
+    
     <com.android.settingslib.widget.FooterPreference
         android:key="power_usage_footer"
         android:title="@string/battery_footer_summary"
