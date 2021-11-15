@@ -24,6 +24,4 @@
     <!-- The Team -->
     <dimen name="team_recycler_height">500dp</dimen>
 
-    <!-- ProgressCard -->
-    <dimen name="progress_card_horizontal_padding">16dp</dimen>
 </resources>

@@ -29,7 +29,6 @@ android_library {
 
     srcs: ["src/**/*.java",
            "Xtensions/src/**/*.java",
-           "src/**/*.kt",
     ],
 
     aaptflags: ["--extra-packages com.xtended"],
