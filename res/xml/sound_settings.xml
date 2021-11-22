@@ -172,6 +172,14 @@
         android:fragment="com.android.settings.gestures.PreventRingingGestureSettings"
         settings:controller="com.android.settings.gestures.PreventRingingParentPreferenceController"/>
 
+    <!-- Vibration intensity preference -->
+    <Preference
+        android:key="vibration_intensity"
+        android:title="@string/vibration_intensity_title"
+        android:summary="@string/vibration_intensity_summary"
+        android:order="-87"
+        android:fragment="com.android.settings.sound.VibrationIntensityFragment" />
+
     <!-- Default notification ringtone -->
     <com.android.settings.DefaultRingtonePreference
         android:key="notification_ringtone"
